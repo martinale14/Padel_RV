@@ -1,4 +1,4 @@
-# Padel RV
+# Pádel RV
 
 Juego entre dos parejas, muy parecido al tenis, pero que se juega entre cuatro paredes y en el que la pelota se golpea con una pala de mango corto.
 
