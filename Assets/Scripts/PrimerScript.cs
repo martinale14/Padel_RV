@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PrimerScript : MonoBehaviour
-{
+{   
+    Vector3 martinEsGay;
+
     // Start is called before the first frame update
     void Start()
     {
