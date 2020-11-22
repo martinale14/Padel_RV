@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class KinectOverlayer : MonoBehaviour 
 {
@@ -8,12 +9,12 @@ public class KinectOverlayer : MonoBehaviour
 //	public Vector3 BottomRight;
 //	public Vector3 BottomLeft;
 
-	public GUITexture backgroundImage;
+	public Image backgroundImage;
 	public KinectWrapper.NuiSkeletonPositionIndex TrackedJoint = KinectWrapper.NuiSkeletonPositionIndex.HandRight;
 	public GameObject OverlayObject;
 	public float smoothFactor = 5f;
 	
-	public GUIText debugText;
+	public Text debugText;
 
 	private float distanceToCamera = 10f;
 
@@ -33,9 +34,9 @@ public class KinectOverlayer : MonoBehaviour
 		if(manager && manager.IsInitialized())
 		{
 			//backgroundImage.renderer.material.mainTexture = manager.GetUsersClrTex();
-			if(backgroundImage && (backgroundImage.texture == null))
+			if((backgroundImage != null) && (backgroundImage.GetComponent<Renderer>().material.mainTexture == null))
 			{
-				backgroundImage.texture = manager.GetUsersClrTex();
+				backgroundImage.GetComponent<Renderer>().material.mainTexture = manager.GetUsersClrTex();
 			}
 			
 //			Vector3 vRight = BottomRight - BottomLeft;
@@ -68,7 +69,7 @@ public class KinectOverlayer : MonoBehaviour
 
 						if(debugText)
 						{
-							debugText.guiText.text = "Tracked user ID: " + userId;  // new Vector2(scaleX, scaleY).ToString();
+							debugText.text = "Tracked user ID: " + userId;  // new Vector2(scaleX, scaleY).ToString();
 						}
 						
 						if(OverlayObject)
