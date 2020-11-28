@@ -33,16 +33,8 @@ public class BasicMovement : MonoBehaviour
 
         if(Input.GetMouseButtonDown(0)){    
 
-            print("click");
-            animacion.SetBool("Golpe", true);
+            animacion.SetTrigger("Golpe");
             
-
-        }
-
-        if(Input.GetMouseButtonDown(1)){    
-
-            print("click");
-            animacion.SetBool("Golpe", false);
 
         }
 
@@ -55,6 +47,12 @@ public class BasicMovement : MonoBehaviour
 
              animacion.SetBool("salto", false);
 
+
+    }
+
+    public void trigGolpe(){
+
+        animacion.SetTrigger("Golpe");
 
     }
 }
