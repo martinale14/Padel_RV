@@ -33,7 +33,7 @@ public class BasicMovement : MonoBehaviour
 
         if(Input.GetMouseButtonDown(0)){    
 
-            animacion.SetTrigger("Golpe");
+            animacion.SetTrigger("golpe");
             
 
         }
@@ -52,7 +52,9 @@ public class BasicMovement : MonoBehaviour
 
     public void trigGolpe(){
 
-        animacion.SetTrigger("Golpe");
+        print("Desacit");
+        animacion.ResetTrigger("golpe");
+         animacion.SetTrigger("golpe");
 
     }
 }
