@@ -17,7 +17,7 @@ public class instanciarPelotas : MonoBehaviour
     {
         tiempo += Time.deltaTime;
 
-        if (tiempo >= 10){
+        if (tiempo >= 5){
 
             Instantiate(prefabBall, new Vector3(4.98f,0.744f,-0.83f), Quaternion.identity);
 

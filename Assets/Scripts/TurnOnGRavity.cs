@@ -4,17 +4,21 @@ using UnityEngine;
 
 public class TurnOnGRavity : MonoBehaviour
 {
+    // Private Variables
     private Rigidbody rb;
-    public float impulse;
     private int refe;
     private float time;
-    public int factorGolp;
+
+    // Public Variables
+    public float impulse;       
+    public float factorGolp;
+    public float factorElev;
+
     // Start is called before the first frame update
     void Start(){
         rb = GetComponent<Rigidbody>();
         refe = 0;
         time = 0;
-        factorGolp = 1;
     }
 
     void Update(){
@@ -46,7 +50,11 @@ public class TurnOnGRavity : MonoBehaviour
 
             dir = -dir.normalized;
 
-            rb.AddForce(dir*colForce*factorGolp, ForceMode.Impulse);
+            dir.y = 1;
+
+            print(colForce);
+
+            rb.AddForce(new Vector3(dir.x * colForce * factorGolp, dir.y * factorElev, dir.z * colForce * factorGolp), ForceMode.Impulse);
 
         }
 
