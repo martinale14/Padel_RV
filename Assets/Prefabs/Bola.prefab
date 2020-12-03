@@ -126,7 +126,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   impulse: 1.1
   factorGolp: 0.85
-  factorElev: 0.93
+  factorElev: 0.98
+  hit: {fileID: 19800000, guid: f06e78284f831ae469c74624ab5d513b, type: 3}
+  hitSound: {fileID: 8300000, guid: ba5fa54245633da41b0344a57d6e5603, type: 3}
 --- !u!1 &6756479017247603081
 GameObject:
   m_ObjectHideFlags: 0
@@ -221,3 +223,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dd62211ba1cb11498dd010123b78044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialPos: {x: 0, y: 0, z: 0}

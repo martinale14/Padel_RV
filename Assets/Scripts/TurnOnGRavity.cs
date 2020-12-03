@@ -13,6 +13,8 @@ public class TurnOnGRavity : MonoBehaviour
     public float impulse;       
     public float factorGolp;
     public float factorElev;
+    public ParticleSystem hit;
+    public AudioClip hitSound;
 
     // Start is called before the first frame update
     void Start(){
@@ -33,6 +35,7 @@ public class TurnOnGRavity : MonoBehaviour
         time += Time.deltaTime;
 
         if(time > 60){
+            DestroyImmediate(hit, true);
             Destroy(this.gameObject);
         }
 
@@ -50,11 +53,14 @@ public class TurnOnGRavity : MonoBehaviour
 
             dir = -dir.normalized;
 
-            dir.y = 1;
+            print(dir.magnitude);
 
-            print(colForce);
+            ParticleSystem.Instantiate(hit, collision.contacts[0].point, Quaternion.identity);
+            AudioSource.PlayClipAtPoint(hitSound, collision.contacts[0].point);
 
-            rb.AddForce(new Vector3(dir.x * colForce * factorGolp, dir.y * factorElev, dir.z * colForce * factorGolp), ForceMode.Impulse);
+            Vector3 fuerzaRegreso = new Vector3(dir.x * colForce * factorGolp, dir.y * factorElev, dir.z * colForce * factorGolp);
+
+            rb.AddForce(fuerzaRegreso, ForceMode.Impulse);
 
         }
 
