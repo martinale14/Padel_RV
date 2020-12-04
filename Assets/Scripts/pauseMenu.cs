@@ -12,19 +12,27 @@ public class pauseMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetKeyDown(KeyCode.Escape)){
+            if(isPaused == false){
+                pause();
+            }else{
+                resume();
+            }
+        }
     }
 
     public void pause(){
         menuPausaUI.SetActive(true);
         HUDUI.SetActive(false);
         Time.timeScale = 0f;
+        isPaused = true;
     }
 
     public void resume(){
         menuPausaUI.SetActive(false);
         HUDUI.SetActive(true);
         Time.timeScale = 1f;
+        isPaused = false;
     }
 
 }
