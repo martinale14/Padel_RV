@@ -9,6 +9,7 @@ public class instanciarPelotas : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale = 1;
         //Instantiate(prefabBall, new Vector3(4.98f,0.744f,-8f), Quaternion.identity);
         tiempo = 0;
     }

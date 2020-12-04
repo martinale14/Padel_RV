@@ -41,12 +41,6 @@ public class TurnOnGRavity : MonoBehaviour
 
             }
         }
-        if(time > 30){
-
-            Instantiate(pelotaPref, new Vector3(4.98f,0.744f,-8f), Quaternion.identity);
-            Destroy(this.gameObject);
-
-        }
 
     }
 
