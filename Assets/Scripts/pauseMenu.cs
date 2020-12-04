@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class pauseMenu : MonoBehaviour
 {
@@ -33,6 +34,18 @@ public class pauseMenu : MonoBehaviour
         HUDUI.SetActive(true);
         Time.timeScale = 1f;
         isPaused = false;
+    }
+
+    public void reiniciar(){
+        SceneManager.LoadScene(SceneManager.GetSceneByName("MainScene").buildIndex);
+        resume();
+    }
+
+    public void salir(){
+        menuPausaUI.SetActive(false);
+        HUDUI.SetActive(true);
+        isPaused = false;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 
 }
