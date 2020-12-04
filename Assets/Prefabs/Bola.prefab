@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4958695222898628013}
   m_Layer: 0
   m_Name: Bola
-  m_TagString: Untagged
+  m_TagString: bola
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -125,10 +125,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   impulse: 1.1
-  factorGolp: 0.85
+  factorGolp: 0.9
   factorElev: 0.98
   hit: {fileID: 19800000, guid: f06e78284f831ae469c74624ab5d513b, type: 3}
   hitSound: {fileID: 8300000, guid: ba5fa54245633da41b0344a57d6e5603, type: 3}
+  turnoCom: 0
 --- !u!1 &6756479017247603081
 GameObject:
   m_ObjectHideFlags: 0

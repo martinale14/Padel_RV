@@ -15,12 +15,15 @@ public class TurnOnGRavity : MonoBehaviour
     public float factorElev;
     public ParticleSystem hit;
     public AudioClip hitSound;
+    public bool turnoCom = false;
+
 
     // Start is called before the first frame update
     void Start(){
         rb = GetComponent<Rigidbody>();
         refe = 0;
         time = 0;
+
     }
 
     void Update(){
@@ -35,14 +38,14 @@ public class TurnOnGRavity : MonoBehaviour
         time += Time.deltaTime;
 
         if(time > 60){
-            Destroy(this.gameObject);
+           // Destroy(this.gameObject);
         }
 
     }
 
     void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.name.Equals("pala")){
+        if(collision.gameObject.name.Equals("pala") && turnoCom == false){
 
             Vector3 dir;
             float colForce;
@@ -54,7 +57,7 @@ public class TurnOnGRavity : MonoBehaviour
 
             dir = -dir.normalized;
 
-            dir.y = 1;
+            dir.y = 1; 
 
             print(dir);
 
@@ -64,6 +67,8 @@ public class TurnOnGRavity : MonoBehaviour
             Vector3 fuerzaRegreso = new Vector3(dir.x * colForce * factorGolp, dir.y * factorElev, dir.z * colForce * factorGolp);
 
             rb.AddForce(fuerzaRegreso, ForceMode.Impulse);
+
+            turnoCom = true;
 
         }
 

@@ -9,6 +9,7 @@ public class instanciarPelotas : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Instantiate(prefabBall, new Vector3(4.98f,0.744f,-8f), Quaternion.identity);
         tiempo = 0;
     }
 
@@ -19,8 +20,8 @@ public class instanciarPelotas : MonoBehaviour
 
         if (tiempo >= 5){
 
-            Instantiate(prefabBall, new Vector3(4.98f,0.744f,-8f), Quaternion.identity);
-            Instantiate(prefabBall, new Vector3(4.98f,0.744f,-5.5f), Quaternion.identity);
+            //Instantiate(prefabBall, new Vector3(4.98f,0.744f,-8f), Quaternion.identity);
+           // Instantiate(prefabBall, new Vector3(4.98f,0.744f,-7f), Quaternion.identity);
 
             tiempo = 0;
         }
