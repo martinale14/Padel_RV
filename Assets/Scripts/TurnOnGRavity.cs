@@ -35,7 +35,6 @@ public class TurnOnGRavity : MonoBehaviour
         time += Time.deltaTime;
 
         if(time > 60){
-            DestroyImmediate(hit, true);
             Destroy(this.gameObject);
         }
 
@@ -49,11 +48,15 @@ public class TurnOnGRavity : MonoBehaviour
             float colForce;
 
             dir = collision.contacts[0].point - transform.position;
+            Physics.IgnoreCollision(GameObject.Find("pala").GetComponent<Collider>(), GetComponent<Collider>());
+
             colForce = collision.impulse.magnitude;
 
             dir = -dir.normalized;
 
-            print(dir.magnitude);
+            dir.y = 1;
+
+            print(dir);
 
             ParticleSystem.Instantiate(hit, collision.contacts[0].point, Quaternion.identity);
             AudioSource.PlayClipAtPoint(hitSound, collision.contacts[0].point);
