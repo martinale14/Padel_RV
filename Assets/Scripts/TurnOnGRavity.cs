@@ -16,6 +16,7 @@ public class TurnOnGRavity : MonoBehaviour
     public ParticleSystem hit;
     public AudioClip hitSound;
     public bool turnoCom = false;
+    public GameObject pelotaPref;
 
 
     // Start is called before the first frame update
@@ -28,17 +29,23 @@ public class TurnOnGRavity : MonoBehaviour
 
     void Update(){
 
-        if(refe == 0){
-
-            refe = 1;
-            rb.AddForce((Vector3.up + Vector3.left)*impulse, ForceMode.Impulse);
-
-        }
-
         time += Time.deltaTime;
 
-        if(time > 60){
-           // Destroy(this.gameObject);
+        if(time >= 3){
+            
+            if(refe == 0){
+
+                refe = 1;
+                rb.useGravity = true;
+                rb.AddForce((Vector3.up + Vector3.left)*impulse, ForceMode.Impulse);
+
+            }
+        }
+        if(time > 30){
+
+            Instantiate(pelotaPref, new Vector3(4.98f,0.744f,-8f), Quaternion.identity);
+            Destroy(this.gameObject);
+
         }
 
     }

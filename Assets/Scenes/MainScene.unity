@@ -8301,6 +8301,24 @@ Transform:
   m_Father: {fileID: 428810675}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!1 &1393212108 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4958695222898628007, guid: 977548b201ba4a443bd6772fbf7dea06,
+    type: 3}
+  m_PrefabInstance: {fileID: 2123980234}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1393212109 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4958695222898628013, guid: 977548b201ba4a443bd6772fbf7dea06,
+    type: 3}
+  m_PrefabInstance: {fileID: 2123980234}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1393212108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 895a00cc31b12674790b267a63c9607a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1398667359
 GameObject:
   m_ObjectHideFlags: 0
@@ -8359,7 +8377,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1398667359}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -495.22958, y: 1.0285492, z: -498.53326}
+  m_LocalPosition: {x: -495.7, y: 1.0285492, z: -505}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1202264382}
@@ -10603,6 +10621,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bola
       objectReference: {fileID: 0}
+    - target: {fileID: 4958695222898628012, guid: 977548b201ba4a443bd6772fbf7dea06,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 977548b201ba4a443bd6772fbf7dea06, type: 3}
 --- !u!137 &1756631712236482642
@@ -10918,6 +10941,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1609a54b669dbed4cac1bada1faa3936, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pelota: {fileID: 4958695222898628007, guid: 977548b201ba4a443bd6772fbf7dea06, type: 3}
-  bola: {fileID: 4958695222898628013, guid: 977548b201ba4a443bd6772fbf7dea06, type: 3}
+  pelota: {fileID: 1393212108}
+  bola: {fileID: 1393212109}
   velocidad: 1

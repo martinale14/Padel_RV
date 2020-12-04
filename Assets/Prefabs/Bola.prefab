@@ -130,6 +130,7 @@ MonoBehaviour:
   hit: {fileID: 19800000, guid: f06e78284f831ae469c74624ab5d513b, type: 3}
   hitSound: {fileID: 8300000, guid: ba5fa54245633da41b0344a57d6e5603, type: 3}
   turnoCom: 0
+  pelotaPref: {fileID: 4958695222898628007}
 --- !u!1 &6756479017247603081
 GameObject:
   m_ObjectHideFlags: 0
