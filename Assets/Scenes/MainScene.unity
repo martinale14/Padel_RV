@@ -10833,7 +10833,7 @@ PrefabInstance:
     - target: {fileID: 4958695222898628003, guid: 977548b201ba4a443bd6772fbf7dea06,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.744
+      value: 1.98
       objectReference: {fileID: 0}
     - target: {fileID: 4958695222898628003, guid: 977548b201ba4a443bd6772fbf7dea06,
         type: 3}
@@ -11223,9 +11223,9 @@ MonoBehaviour:
   pelota: {fileID: 1393212108}
   bola: {fileID: 1393212109}
   velocidad: 1
-  impulseRegre: 1.6
+  impulseRegre: 1.2
   factElev: 1
-  disToReb: 0.9
+  disToReb: 0.8
 --- !u!65 &6426506655012665101
 BoxCollider:
   m_ObjectHideFlags: 0
