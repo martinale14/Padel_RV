@@ -23,18 +23,10 @@ public class paredRiv : MonoBehaviour
         if(collision.gameObject.name.Equals("Bola")){
             if(turno.turnoCom == true){
                 if(PlayerPrefs.GetInt("pego1") == 1){
-                    if(PlayerPrefs.GetInt("myScore") < 30){
-                        resetear();
-                    }else{
-
-                    }
+                    resetear();
                 }
             }else{
-                if(PlayerPrefs.GetInt("myScore") < 30){
-                    resetear();
-                }else{
-
-                }
+                resetear();
             }
         }
     }

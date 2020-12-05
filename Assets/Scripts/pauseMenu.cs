@@ -43,7 +43,15 @@ public class pauseMenu : MonoBehaviour
     }
 
     public void reiniciar(){
-        SceneManager.LoadScene(SceneManager.GetSceneByName("MainScene").buildIndex);
+        PlayerPrefs.SetInt("myScore", 0);
+        PlayerPrefs.SetInt("rivScore", 0);
+        PlayerPrefs.SetInt("mySets", 0);
+        PlayerPrefs.SetInt("rivSets", 0);
+        PlayerPrefs.SetInt("rebote1", 0);
+        PlayerPrefs.SetInt("rebote2", 0);
+        PlayerPrefs.SetInt("pego1", 0);
+        PlayerPrefs.SetInt("pego2", 0);
+        SceneManager.LoadScene(1);
         resume();
     }
 

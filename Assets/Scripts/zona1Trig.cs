@@ -28,18 +28,10 @@ public class zona1Trig : MonoBehaviour
             PlayerPrefs.SetInt("rebote1", rebote + 1);
             PlayerPrefs.SetInt("rebote2", 0);
             if(turno.turnoCom == false){
-                if(PlayerPrefs.GetInt("myScore") < 30){
-                    resetear();
-                }else{
-
-                }
+                resetear();
             }else{
                 if(PlayerPrefs.GetInt("rebote1") > 1){
-                    if(PlayerPrefs.GetInt("myScore") < 30){
-                        resetear();
-                    }else{
-
-                    }
+                    resetear(); 
                 }
                 
             }

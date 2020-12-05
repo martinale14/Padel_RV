@@ -352,6 +352,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4aa290e7c1a74f4ebd2086354a1d630, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  menuPausaUI: {fileID: 205549441}
+  HUDUI: {fileID: 1159194808}
   myScore: {fileID: 2122285265}
   rivScore: {fileID: 106286829}
   mySets: {fileID: 510007503}
@@ -3507,6 +3509,7 @@ GameObject:
   m_Component:
   - component: {fileID: 584962868}
   - component: {fileID: 584962869}
+  - component: {fileID: 584962870}
   m_Layer: 0
   m_Name: cancha
   m_TagString: Untagged
@@ -3541,6 +3544,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &584962870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 584962867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d9c83221c879a143a8d2f75ee50b325, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turno: {fileID: 0}
 --- !u!1 &602927934
 GameObject:
   m_ObjectHideFlags: 0
@@ -11425,11 +11441,7 @@ PrefabInstance:
     - target: {fileID: 4958695222898628003, guid: 977548b201ba4a443bd6772fbf7dea06,
         type: 3}
       propertyPath: m_LocalPosition.y
-<<<<<<< HEAD
-      value: 0.99
-=======
       value: 0.83
->>>>>>> 1393fca158ecf407468862f2d1aba3cbf0188369
       objectReference: {fileID: 0}
     - target: {fileID: 4958695222898628003, guid: 977548b201ba4a443bd6772fbf7dea06,
         type: 3}

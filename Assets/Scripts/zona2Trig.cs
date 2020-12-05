@@ -25,20 +25,12 @@ public class zona2Trig : MonoBehaviour
             PlayerPrefs.SetInt("pego2", 1);
             PlayerPrefs.SetInt("pego1", 0);
             PlayerPrefs.SetInt("rebote2", rebote + 1);
-            PlayerPrefs.SetInt("rebote2", 0);
+            PlayerPrefs.SetInt("rebote1", 0);
             if(turno.turnoCom == true){
-                if(PlayerPrefs.GetInt("rivScore") < 30){
-                    resetear();
-                }else{
-
-                }
+                resetear();
             }else{
                 if(PlayerPrefs.GetInt("rebote2") > 1){
-                    if(PlayerPrefs.GetInt("rivScore") < 30){
-                        resetear();
-                    }else{
-
-                    }
+                    resetear();
                 }
             }
         }
