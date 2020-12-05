@@ -25,7 +25,7 @@ public class paredYo : MonoBehaviour
                     if(PlayerPrefs.GetInt("rivScore") < 30){
                         resetear();
                     }else{
-
+                        
                     }
                 }
             }else{
