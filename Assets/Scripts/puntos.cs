@@ -13,6 +13,8 @@ public class puntos : MonoBehaviour
     public Text rivScore;
     public Text mySets;
     public Text rivSets;
+    public GameObject ganasteUI;
+    public GameObject perdisteUI;
 
 
     // Start is called before the first frame update
@@ -33,7 +35,7 @@ public class puntos : MonoBehaviour
             int set = PlayerPrefs.GetInt("mySets");
             PlayerPrefs.SetInt("mySets", set + 1);
             if(PlayerPrefs.GetInt("mySets") >= 3){
-                print("Ganaste"); //Reiniciar variables con boton del canvas bueno
+                ganasteUI.SetActive(true);
                 menuPausaUI.SetActive(false);
                 HUDUI.SetActive(false);
                 Time.timeScale = 0f;
@@ -47,7 +49,7 @@ public class puntos : MonoBehaviour
             int set = PlayerPrefs.GetInt("rivSets");
             PlayerPrefs.SetInt("rivSets", set + 1);
             if(PlayerPrefs.GetInt("rivSets") >= 3){
-                print("Perdiste"); //Reiniciar variables con boton del canvas bueno
+                perdisteUI.SetActive(true);
                 menuPausaUI.SetActive(false);
                 HUDUI.SetActive(false);
                 Time.timeScale = 0f;

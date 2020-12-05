@@ -3120,9 +3120,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf20bc9a42cd44046bebf7cc677193f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  VolumeS: {fileID: 0}
-  myMusic: {fileID: 0}
-  opciones: {fileID: 0}
+  VolumeS: {fileID: 1185299433}
+  myMusic: {fileID: 121318112}
+  opciones: {fileID: 677024728}
 --- !u!1 &1872435931
 GameObject:
   m_ObjectHideFlags: 0
