@@ -15,12 +15,15 @@ public class puntos : MonoBehaviour
     public Text rivSets;
     public GameObject ganasteUI;
     public GameObject perdisteUI;
+    public bool cambiarYo = true;
+    public bool cambiarRiv = true;
+    public bool activar = true;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -31,28 +34,40 @@ public class puntos : MonoBehaviour
         mySets.text = PlayerPrefs.GetInt("mySets").ToString();
         rivSets.text = PlayerPrefs.GetInt("rivSets").ToString();
 
-        if(PlayerPrefs.GetInt("myScore") == 40){
-            int set = PlayerPrefs.GetInt("mySets");
-            PlayerPrefs.SetInt("mySets", set + 1);
+        if(PlayerPrefs.GetInt("myScore") == 10){
+            if(cambiarYo == true){
+                int set = PlayerPrefs.GetInt("mySets");
+                PlayerPrefs.SetInt("mySets", set + 1);
+            }
             if(PlayerPrefs.GetInt("mySets") >= 3){
-                ganasteUI.SetActive(true);
-                menuPausaUI.SetActive(false);
-                HUDUI.SetActive(false);
-                Time.timeScale = 0f;
+                if(activar == true){
+                    cambiarYo = false;
+                    ganasteUI.SetActive(true);
+                    menuPausaUI.SetActive(false);
+                    HUDUI.SetActive(false);
+                    Time.timeScale = 0f;
+                    activar = false;
+                }
             }else{
                 variables();
                 SceneManager.LoadScene(1);
             }
         }
 
-        if(PlayerPrefs.GetInt("rivScore") == 40){
-            int set = PlayerPrefs.GetInt("rivSets");
-            PlayerPrefs.SetInt("rivSets", set + 1);
+        if(PlayerPrefs.GetInt("rivScore") == 10){
+            if(cambiarRiv == true){
+                int set = PlayerPrefs.GetInt("rivSets");
+                PlayerPrefs.SetInt("rivSets", set + 1);
+            }
             if(PlayerPrefs.GetInt("rivSets") >= 3){
-                perdisteUI.SetActive(true);
-                menuPausaUI.SetActive(false);
-                HUDUI.SetActive(false);
-                Time.timeScale = 0f;
+                if(activar == true){
+                    cambiarRiv = false;
+                    perdisteUI.SetActive(true);
+                    menuPausaUI.SetActive(false);
+                    HUDUI.SetActive(false);
+                    Time.timeScale = 0f;
+                    activar = false;
+                }
             }else{
                 variables();
                 SceneManager.LoadScene(1);
