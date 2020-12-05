@@ -29,9 +29,8 @@ public class AiCom : MonoBehaviour
             offset.y = 0;
             offset.x = 0;
             if(transform.position.z < 2.5 && transform.position.z > 12.5){
-
+                transform.position = new Vector3(transform.position.x,transform.position.y,bola.transform.position.z);
             }
-            transform.position = new Vector3(transform.position.x,transform.position.y,bola.transform.position.z);
             //GetComponent<Animator>().SetFloat("VelocidadX", offset.z);
 
         }

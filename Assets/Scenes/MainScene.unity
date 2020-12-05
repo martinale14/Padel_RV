@@ -1105,10 +1105,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
-  m_ReferencePixelsPerUnit: 100
+  m_UiScaleMode: 1
+  m_ReferencePixelsPerUnit: 1000
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -1125,9 +1125,9 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 1
-  m_Camera: {fileID: 963194227}
+  m_Camera: {fileID: 0}
   m_PlaneDistance: 100
-  m_PixelPerfect: 0
+  m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
@@ -10833,12 +10833,12 @@ PrefabInstance:
     - target: {fileID: 4958695222898628003, guid: 977548b201ba4a443bd6772fbf7dea06,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.98
+      value: 0.83
       objectReference: {fileID: 0}
     - target: {fileID: 4958695222898628003, guid: 977548b201ba4a443bd6772fbf7dea06,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -8
+      value: -8.35
       objectReference: {fileID: 0}
     - target: {fileID: 4958695222898628003, guid: 977548b201ba4a443bd6772fbf7dea06,
         type: 3}
@@ -10893,7 +10893,7 @@ PrefabInstance:
     - target: {fileID: 4958695222898628012, guid: 977548b201ba4a443bd6772fbf7dea06,
         type: 3}
       propertyPath: m_Mass
-      value: 0.22
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 4958695222898628013, guid: 977548b201ba4a443bd6772fbf7dea06,
         type: 3}
@@ -10903,7 +10903,12 @@ PrefabInstance:
     - target: {fileID: 4958695222898628013, guid: 977548b201ba4a443bd6772fbf7dea06,
         type: 3}
       propertyPath: factorGolp
-      value: 1.25
+      value: 1.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4958695222898628013, guid: 977548b201ba4a443bd6772fbf7dea06,
+        type: 3}
+      propertyPath: factorElev
+      value: 0.9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 977548b201ba4a443bd6772fbf7dea06, type: 3}
@@ -11223,8 +11228,8 @@ MonoBehaviour:
   pelota: {fileID: 1393212108}
   bola: {fileID: 1393212109}
   velocidad: 1
-  impulseRegre: 1.2
-  factElev: 1
+  impulseRegre: 1.4
+  factElev: 0.98
   disToReb: 0.8
 --- !u!65 &6426506655012665101
 BoxCollider:
