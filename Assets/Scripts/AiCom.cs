@@ -38,7 +38,7 @@ public class AiCom : MonoBehaviour
             bola.rb.velocity = Vector3.zero;
             bola.rb.angularVelocity = Vector3.zero;
             bola.rb.AddForce((Vector3.up + Vector3.left)*impulseRegre, ForceMode.Impulse);
-            Physics.IgnoreCollision(GameObject.Find("palaOp").GetComponent<Collider>(), GameObject.Find("Bola").GetComponent<Collider>(), false);
+            Physics.IgnoreCollision(GameObject.Find("palaOp").GetComponent<Collider>(), collision.gameObject.GetComponent<Collider>(), false);
             bola.turnoCom = false;
         }
     }
