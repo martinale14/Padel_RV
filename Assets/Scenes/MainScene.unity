@@ -358,8 +358,11 @@ MonoBehaviour:
   rivScore: {fileID: 106286829}
   mySets: {fileID: 510007503}
   rivSets: {fileID: 918827482}
-  ganasteUI: {fileID: 0}
-  perdisteUI: {fileID: 0}
+  ganasteUI: {fileID: 1559701067}
+  perdisteUI: {fileID: 865508589}
+  cambiarYo: 1
+  cambiarRiv: 1
+  activar: 1
 --- !u!1 &21674522
 GameObject:
   m_ObjectHideFlags: 0
@@ -6471,8 +6474,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 865508590}
-          m_MethodName: salir
+        - m_Target: {fileID: 1778994664}
+          m_MethodName: reproducir
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -6527,6 +6530,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 865508590}
         m_MethodName: reiniciar
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1778994664}
+        m_MethodName: reproducir
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -13330,8 +13344,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 865508590}
-          m_MethodName: salir
+        - m_Target: {fileID: 1778994664}
+          m_MethodName: reproducir
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -13386,6 +13400,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 865508590}
         m_MethodName: salir
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1778994664}
+        m_MethodName: reproducir
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
