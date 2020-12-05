@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.IO;
 
 public class MenuPrincipal : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class MenuPrincipal : MonoBehaviour
         PlayerPrefs.SetInt("rebote2", 0);
         PlayerPrefs.SetInt("pego1", 0); //0 no, 1 si
         PlayerPrefs.SetInt("pego2", 0); //0 no, 1 si
+        
     }
 
     // Update is called once per frame
