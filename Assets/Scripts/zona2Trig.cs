@@ -34,7 +34,7 @@ public class zona2Trig : MonoBehaviour
 
                 }
             }else{
-                if(rebote > 1){
+                if(PlayerPrefs.GetInt("rebote2") > 1){
                     if(PlayerPrefs.GetInt("rivScore") < 30){
                         int score = PlayerPrefs.GetInt("rivScore");
                         PlayerPrefs.SetInt("rivScore", score + 10);

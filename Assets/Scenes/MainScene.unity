@@ -10858,7 +10858,7 @@ PrefabInstance:
     - target: {fileID: 4958695222898628003, guid: 977548b201ba4a443bd6772fbf7dea06,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.744
+      value: 1.98
       objectReference: {fileID: 0}
     - target: {fileID: 4958695222898628003, guid: 977548b201ba4a443bd6772fbf7dea06,
         type: 3}
@@ -11239,11 +11239,8 @@ MonoBehaviour:
   bola: {fileID: 1393212109}
   velocidad: 1
   impulseRegre: 1.2
-<<<<<<< HEAD
---- !u!65 &6426506655012665102
-=======
+  factElev: 0
 --- !u!65 &6426506655012665101
->>>>>>> 0ad774660065369298e171d1d09ffdce565fa060
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -11254,10 +11251,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-<<<<<<< HEAD
-  m_Size: {x: 1.42, y: 1.87, z: 0.46}
-  m_Center: {x: 0, y: 0.91, z: 0}
-=======
   m_Size: {x: 1, y: 1.83, z: 1}
   m_Center: {x: 0, y: 0.87, z: 0}
->>>>>>> 0ad774660065369298e171d1d09ffdce565fa060

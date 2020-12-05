@@ -37,7 +37,7 @@ public class TurnOnGRavity : MonoBehaviour
 
                 refe = 1;
                 rb.useGravity = true;
-                //rb.AddForce((Vector3.up + Vector3.left)*impulse, ForceMode.Impulse);
+                rb.AddForce((Vector3.up + Vector3.left)*impulse, ForceMode.Impulse);
 
             }
         }
