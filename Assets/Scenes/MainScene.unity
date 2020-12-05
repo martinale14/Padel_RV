@@ -14550,7 +14550,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pelota: {fileID: 1393212108}
   bola: {fileID: 1393212109}
-  velocidad: 0.4
+  velocidad: 0.5
   impulseRegre: 1.4
   factElev: 0.98
   disToReb: 0.8

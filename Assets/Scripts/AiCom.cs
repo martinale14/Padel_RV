@@ -38,6 +38,7 @@ public class AiCom : MonoBehaviour
             }else{
                 if(transform.position.x < posIn.x){
                     transform.Translate(new Vector3(0,0,transform.position.x-posIn.x)*velocidad);
+                    anim.SetFloat("VelocidadY", transform.position.x-posIn.x);
                 }
             }
             if(offset.y > 1){

@@ -34,7 +34,7 @@ public class puntos : MonoBehaviour
         mySets.text = PlayerPrefs.GetInt("mySets").ToString();
         rivSets.text = PlayerPrefs.GetInt("rivSets").ToString();
 
-        if(PlayerPrefs.GetInt("myScore") == 10){
+        if(PlayerPrefs.GetInt("myScore") == 40){
             if(cambiarYo == true){
                 int set = PlayerPrefs.GetInt("mySets");
                 PlayerPrefs.SetInt("mySets", set + 1);
@@ -54,7 +54,7 @@ public class puntos : MonoBehaviour
             }
         }
 
-        if(PlayerPrefs.GetInt("rivScore") == 10){
+        if(PlayerPrefs.GetInt("rivScore") == 40){
             if(cambiarRiv == true){
                 int set = PlayerPrefs.GetInt("rivSets");
                 PlayerPrefs.SetInt("rivSets", set + 1);
