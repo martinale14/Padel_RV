@@ -49,12 +49,9 @@ public class TurnOnGRavity : MonoBehaviour
         if(collision.gameObject.name.Equals("palaOp") && turnoCom == false){
 
             Vector3 dir;
-            float colForce;
 
             dir = collision.contacts[0].point - transform.position;
             Physics.IgnoreCollision(GameObject.Find("palaOp").GetComponent<Collider>(), GetComponent<Collider>(), true);
-
-            colForce = collision.impulse.magnitude;
 
             dir = -dir.normalized;
 
@@ -63,7 +60,9 @@ public class TurnOnGRavity : MonoBehaviour
             ParticleSystem.Instantiate(hit, collision.contacts[0].point, Quaternion.identity);
             AudioSource.PlayClipAtPoint(hitSound, collision.contacts[0].point);
 
-            Vector3 fuerzaRegreso = new Vector3(dir.x * colForce * factorGolp, dir.y * factorElev, dir.z * colForce * factorGolp);
+            rb.angularVelocity = Vector3.zero;
+            rb.velocity = Vector3.zero;
+            Vector3 fuerzaRegreso = new Vector3(dir.x * factorGolp, dir.y * factorElev, dir.z * factorGolp);
 
             rb.AddForce(fuerzaRegreso, ForceMode.Impulse);
 
