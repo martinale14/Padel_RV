@@ -14,12 +14,12 @@ public class AiCom : MonoBehaviour
     private AudioClip hitSound;
 
     public float disToReb;
+    private Vector3 posIn;
 
     // Start is called before the first frame update
     void Start()
     {
-        hit = bola.hit;
-        hitSound = bola.hitSound;
+        posIn = transform.position;
     }
 
     // Update is called once per frame
@@ -29,11 +29,25 @@ public class AiCom : MonoBehaviour
         if(bola.turnoCom == true){
 
             Vector3 offset = pelota.transform.position - transform.position;
+            print(offset.magnitude);
+            if(offset.magnitude < 3){
+                //transform.Translate(new Vector3(0,0,offset.z)*velocidad);
+            }else{
+                //if(transform.position.x < posIn.x){
+                  //  transform.Translate(new Vector3(-1,0,0)*Time.deltaTime);
+                //}
+            }
+            if(offset.y > 1){
+                
+            }
             offset = offset.normalized;
             offset.y = 0;
             offset.x = 0;
             if(transform.position.z < -2.5 && transform.position.z > -12.5){
                 transform.position = new Vector3(transform.position.x,transform.position.y,bola.transform.position.z);
+                //if(offset.magnitude != 0){
+                  //  transform.Translate(new Vector3(0,0,offset.x)*velocidad);
+                //}
             }
             //GetComponent<Animator>().SetFloat("VelocidadX", offset.z);
 
@@ -43,16 +57,14 @@ public class AiCom : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.name.Equals("Bola")){
-
+            hit = bola.hit;
+            hitSound = bola.hitSound;
             bola.rb.velocity = Vector3.zero;
             bola.rb.angularVelocity = Vector3.zero;
             Vector3 dir = GameObject.Find("palaOp").transform.position-bola.transform.position;
             dir.x += disToReb;
             dir.Normalize();
             dir.y = 1;
-            print("PalaOp" + GameObject.Find("palaOp").transform.position);
-            print("bola" + bola.transform.position);
-            print("dir" + dir);
             ParticleSystem.Instantiate(hit, collision.contacts[0].point, Quaternion.identity);
             AudioSource.PlayClipAtPoint(hitSound, collision.contacts[0].point);
             bola.rb.AddForce(new Vector3(dir.x*impulseRegre, dir.y * factElev, dir.z * impulseRegre), ForceMode.Impulse);

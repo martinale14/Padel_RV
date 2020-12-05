@@ -3556,7 +3556,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d9c83221c879a143a8d2f75ee50b325, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turno: {fileID: 0}
+  turno: {fileID: 1393212109}
 --- !u!1 &602927934
 GameObject:
   m_ObjectHideFlags: 0
@@ -11185,6 +11185,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: 10093_Wembley_stadion_V3_Iteration0
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 386f0c8b13000424ab1f7f18f21fc838,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3190568803569909052, guid: 386f0c8b13000424ab1f7f18f21fc838,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -11835,7 +11840,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pelota: {fileID: 1393212108}
   bola: {fileID: 1393212109}
-  velocidad: 1
+  velocidad: 0.15
   impulseRegre: 1.4
   factElev: 0.98
   disToReb: 0.8

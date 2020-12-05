@@ -21,7 +21,6 @@ public class zona1Trig : MonoBehaviour
     public void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.name.Equals("Bola")){
-            //print("pego1");
             int rebote = PlayerPrefs.GetInt("rebote1");
             PlayerPrefs.SetInt("pego1", 1);
             PlayerPrefs.SetInt("pego2", 0);
