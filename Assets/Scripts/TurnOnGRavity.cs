@@ -15,7 +15,7 @@ public class TurnOnGRavity : MonoBehaviour
     public float factorElev;
     public ParticleSystem hit;
     public AudioClip hitSound;
-    public bool turnoCom = false;
+    public bool turnoCom = false; //Falso lo tocó la com, verdad lo toqué yo
     public GameObject pelotaPref;
 
 
@@ -37,7 +37,7 @@ public class TurnOnGRavity : MonoBehaviour
 
                 refe = 1;
                 rb.useGravity = true;
-                rb.AddForce((Vector3.up + Vector3.left)*impulse, ForceMode.Impulse);
+                //rb.AddForce((Vector3.up + Vector3.left)*impulse, ForceMode.Impulse);
 
             }
         }
