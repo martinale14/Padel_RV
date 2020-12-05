@@ -7,23 +7,41 @@ public class AiCom : MonoBehaviour
     public GameObject pelota;
     public TurnOnGRavity bola;
     public float velocidad;
+    public float impulseRegre;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+    
     }
 
     // Update is called once per frame
     void Update()
     {
-        print(bola.turnoCom);
+
         if(bola.turnoCom == true){
 
             Vector3 offset = pelota.transform.position - transform.position;
             offset = offset.normalized;
             offset.y = 0;
-            transform.Translate(offset * velocidad * Time.deltaTime);
+            offset.x = 0;
+            transform.position = new Vector3(transform.position.x,transform.position.y,bola.transform.position.z);
+            GetComponent<Animator>().SetFloat("VelocidadZ", offset.z);
 
         }
     }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.name.Equals("Bola")){
+
+            bola.rb.velocity = Vector3.zero;
+            bola.rb.angularVelocity = Vector3.zero;
+            bola.rb.AddForce((Vector3.up + Vector3.left)*impulseRegre, ForceMode.Impulse);
+            Physics.IgnoreCollision(GameObject.Find("palaOp").GetComponent<Collider>(), GameObject.Find("Bola").GetComponent<Collider>(), false);
+            bola.turnoCom = false;
+        }
+    }
+
+    
 }

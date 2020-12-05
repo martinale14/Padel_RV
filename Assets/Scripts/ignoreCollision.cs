@@ -8,6 +8,8 @@ public class ignoreCollision : MonoBehaviour
     void Start()
     {
         Physics.IgnoreCollision(GameObject.Find("canchasimple").GetComponent<Collider>(), GetComponent<Collider>());
+        Physics.IgnoreCollision(GameObject.Find("COM").GetComponent<Collider>(), GetComponent<Collider>());
+
     }
 
     // Update is called once per frame
