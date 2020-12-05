@@ -353,6 +353,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myScore: {fileID: 2122285265}
+  rivScore: {fileID: 0}
+  mySets: {fileID: 0}
+  rivSet: {fileID: 0}
 --- !u!1 &21674522
 GameObject:
   m_ObjectHideFlags: 0
@@ -11190,3 +11193,17 @@ MonoBehaviour:
   pelota: {fileID: 1393212108}
   bola: {fileID: 1393212109}
   velocidad: 1
+  impulseRegre: 0
+--- !u!65 &6426506655012665101
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6426506655012665099}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.83, z: 1}
+  m_Center: {x: 0, y: 0.87, z: 0}

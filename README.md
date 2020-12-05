@@ -5,5 +5,5 @@ Juego entre dos parejas, muy parecido al tenis, pero que se juega entre cuatro p
 # Integrantes: 
 
 - Valentina Barajas Loaiza
-- Juan Pablo Rivera Gonzáles
+- Juan Pablo Rivera González
 - Martín Alejandro Escobar Espinel

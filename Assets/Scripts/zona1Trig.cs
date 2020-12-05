@@ -43,7 +43,7 @@ public class zona1Trig : MonoBehaviour
                         PlayerPrefs.SetInt("rebote1", 0);
                         SceneManager.LoadScene(1);
                     }else{
-                        
+
                     }
                 }
                 

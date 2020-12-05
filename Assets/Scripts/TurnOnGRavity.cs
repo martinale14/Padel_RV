@@ -5,7 +5,7 @@ using UnityEngine;
 public class TurnOnGRavity : MonoBehaviour
 {
     // Private Variables
-    private Rigidbody rb;
+    public Rigidbody rb;
     private int refe;
     private float time;
 
@@ -52,7 +52,7 @@ public class TurnOnGRavity : MonoBehaviour
             float colForce;
 
             dir = collision.contacts[0].point - transform.position;
-            Physics.IgnoreCollision(GameObject.Find("palaOp").GetComponent<Collider>(), GetComponent<Collider>());
+            Physics.IgnoreCollision(GameObject.Find("palaOp").GetComponent<Collider>(), GetComponent<Collider>(), true);
 
             colForce = collision.impulse.magnitude;
 
@@ -70,6 +70,7 @@ public class TurnOnGRavity : MonoBehaviour
             turnoCom = true;
 
         }
+
 
     }
 
