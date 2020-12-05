@@ -10,6 +10,8 @@ public class AiCom : MonoBehaviour
     public float impulseRegre;
     public float factElev;
 
+    public float disToReb;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,7 +41,7 @@ public class AiCom : MonoBehaviour
             bola.rb.velocity = Vector3.zero;
             bola.rb.angularVelocity = Vector3.zero;
             Vector3 dir = GameObject.Find("palaOp").transform.position-bola.transform.position;
-            dir.x += 2;
+            dir.x += disToReb;
             dir.Normalize();
             dir.y = 1;
             print("PalaOp" + GameObject.Find("palaOp").transform.position);

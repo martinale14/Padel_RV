@@ -4700,19 +4700,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 916963034}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &916963036
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 916963035}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.3329333, y: 3.8619392, z: 4.883688}
-  m_Center: {x: 0.12212793, y: 0.013945145, z: 0.16384943}
 --- !u!54 &916963038
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11239,11 +11226,8 @@ MonoBehaviour:
   bola: {fileID: 1393212109}
   velocidad: 1
   impulseRegre: 1.2
-<<<<<<< HEAD
---- !u!65 &6426506655012665102
-=======
+  factElev: 0
 --- !u!65 &6426506655012665101
->>>>>>> 0ad774660065369298e171d1d09ffdce565fa060
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -11251,13 +11235,8 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6426506655012665099}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-<<<<<<< HEAD
-  m_Size: {x: 1.42, y: 1.87, z: 0.46}
-  m_Center: {x: 0, y: 0.91, z: 0}
-=======
-  m_Size: {x: 1, y: 1.83, z: 1}
-  m_Center: {x: 0, y: 0.87, z: 0}
->>>>>>> 0ad774660065369298e171d1d09ffdce565fa060
+  m_Size: {x: 1.5217178, y: 1.8300002, z: 0.5101355}
+  m_Center: {x: 0.26085895, y: 0.87, z: 0.017627984}
