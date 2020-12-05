@@ -18,7 +18,7 @@ public class MenuPrincipal : MonoBehaviour
     }
     public void EmpezarJuego()
     {
-        print("Empezando ...");
+
         SceneManager.LoadScene(1);
 
     }

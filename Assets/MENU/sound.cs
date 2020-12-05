@@ -20,6 +20,6 @@ public class sound : MonoBehaviour
     public void reproducir(){
         
         fuente.Play();
-        print("sonando");
+
     }
 }

@@ -20,6 +20,12 @@ public class pauseMenu : MonoBehaviour
                 resume();
             }
         }
+
+        if(Input.GetKeyDown("p")){
+
+            reiniciar();
+
+        }
     }
 
     public void pause(){

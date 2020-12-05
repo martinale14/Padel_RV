@@ -16,6 +16,7 @@ public class AiCom : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        print(bola.turnoCom);
         if(bola.turnoCom == true){
 
             Vector3 offset = pelota.transform.position - transform.position;

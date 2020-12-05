@@ -58,9 +58,7 @@ public class TurnOnGRavity : MonoBehaviour
 
             dir = -dir.normalized;
 
-            dir.y = 1; 
-
-            print(dir);
+            dir.y = 1;
 
             ParticleSystem.Instantiate(hit, collision.contacts[0].point, Quaternion.identity);
             AudioSource.PlayClipAtPoint(hitSound, collision.contacts[0].point);

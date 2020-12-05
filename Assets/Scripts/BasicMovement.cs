@@ -52,7 +52,6 @@ public class BasicMovement : MonoBehaviour
 
     public void trigGolpe(){
 
-        print("Desacit");
         animacion.ResetTrigger("golpe");
          animacion.SetTrigger("golpe");
 
