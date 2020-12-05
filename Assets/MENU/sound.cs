@@ -1,9 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class MenuPrincipal : MonoBehaviour
+public class sound : MonoBehaviour
 {
     public AudioSource fuente;
     public AudioClip clip;
@@ -18,20 +17,9 @@ public class MenuPrincipal : MonoBehaviour
     {
         
     }
-    public void EmpezarJuego()
-    {
-        print("Empezando ...");
-        SceneManager.LoadScene(1);
-
-    }
-    public void CerrarJuego() {
-        Application.Quit();
-        Debug.Log("Salir");
-    }
-
     public void reproducir(){
         
         fuente.Play();
+        print("sonando");
     }
-
 }

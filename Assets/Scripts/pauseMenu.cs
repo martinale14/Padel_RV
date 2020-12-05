@@ -45,7 +45,7 @@ public class pauseMenu : MonoBehaviour
         menuPausaUI.SetActive(false);
         HUDUI.SetActive(true);
         isPaused = false;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        SceneManager.LoadScene(0);
     }
 
 }
