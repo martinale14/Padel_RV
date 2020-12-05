@@ -15,7 +15,7 @@ public class TurnOnGRavity : MonoBehaviour
     public float factorElev;
     public ParticleSystem hit;
     public AudioClip hitSound;
-    public bool turnoCom = false;
+    public bool turnoCom = false; //Falso lo tocó la com, verdad lo toqué yo
     public GameObject pelotaPref;
 
 
@@ -46,13 +46,13 @@ public class TurnOnGRavity : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.name.Equals("pala") && turnoCom == false){
+        if(collision.gameObject.name.Equals("palaOp") && turnoCom == false){
 
             Vector3 dir;
             float colForce;
 
             dir = collision.contacts[0].point - transform.position;
-            Physics.IgnoreCollision(GameObject.Find("pala").GetComponent<Collider>(), GetComponent<Collider>());
+            Physics.IgnoreCollision(GameObject.Find("palaOp").GetComponent<Collider>(), GetComponent<Collider>());
 
             colForce = collision.impulse.magnitude;
 

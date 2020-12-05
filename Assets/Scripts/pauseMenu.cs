@@ -21,7 +21,7 @@ public class pauseMenu : MonoBehaviour
             }
         }
 
-        if(Input.GetKeyDown("p")){
+        if(Input.GetKeyDown("r")){
 
             reiniciar();
 
