@@ -9,13 +9,17 @@ public class AiCom : MonoBehaviour
     public float velocidad;
     public float impulseRegre;
     public float factElev;
+    private ParticleSystem hit;
+
+    private AudioClip hitSound;
 
     public float disToReb;
 
     // Start is called before the first frame update
     void Start()
     {
-    
+        hit = bola.hit;
+        hitSound = bola.hitSound;
     }
 
     // Update is called once per frame
@@ -49,6 +53,8 @@ public class AiCom : MonoBehaviour
             print("PalaOp" + GameObject.Find("palaOp").transform.position);
             print("bola" + bola.transform.position);
             print("dir" + dir);
+            ParticleSystem.Instantiate(hit, collision.contacts[0].point, Quaternion.identity);
+            AudioSource.PlayClipAtPoint(hitSound, collision.contacts[0].point);
             bola.rb.AddForce(new Vector3(dir.x*impulseRegre, dir.y * factElev, dir.z * impulseRegre), ForceMode.Impulse);
             Physics.IgnoreCollision(GameObject.Find("palaOp").GetComponent<Collider>(), collision.gameObject.GetComponent<Collider>(), false);
             bola.turnoCom = false;
