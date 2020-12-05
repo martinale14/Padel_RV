@@ -23,25 +23,30 @@ public class paredRiv : MonoBehaviour
         if(collision.gameObject.name.Equals("Bola")){
             if(turno.turnoCom == true){
                 if(PlayerPrefs.GetInt("pego1") == 1){
-                    PlayerPrefs.SetInt("pego1", 0);
                     if(PlayerPrefs.GetInt("myScore") < 30){
-                    int score = PlayerPrefs.GetInt("myScore");
-                    PlayerPrefs.SetInt("myScore", score + 10);
-                    SceneManager.LoadScene(1);
+                        resetear();
                     }else{
 
                     }
                 }
             }else{
                 if(PlayerPrefs.GetInt("myScore") < 30){
-                    int score = PlayerPrefs.GetInt("myScore");
-                    PlayerPrefs.SetInt("myScore", score + 10);
-                    SceneManager.LoadScene(1);
+                    resetear();
                 }else{
 
                 }
             }
         }
+    }
+
+    public void resetear(){
+        int score = PlayerPrefs.GetInt("myScore");
+        PlayerPrefs.SetInt("myScore", score + 10);
+        PlayerPrefs.SetInt("rebote1", 0);
+        PlayerPrefs.SetInt("rebote2", 0);
+        PlayerPrefs.SetInt("pego1", 0);
+        PlayerPrefs.SetInt("pego2", 0);
+        SceneManager.LoadScene(1);
     }
 
 }
