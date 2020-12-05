@@ -4422,7 +4422,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 9100000, guid: a7d96cea1b420e24db5aa862e65d3dab, type: 2}
     - target: {fileID: 6769863803743758771, guid: 0e7c48c8b3f3f784784585fe67528cf0,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -8539,11 +8539,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100176, guid: ae23d50304c93b9418b65cec8f9fe954, type: 3}
       propertyPath: m_Name
-      value: U_CharacterBack
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 100176, guid: ae23d50304c93b9418b65cec8f9fe954, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100176, guid: ae23d50304c93b9418b65cec8f9fe954, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: ae23d50304c93b9418b65cec8f9fe954, type: 3}
       propertyPath: m_LocalRotation.x
@@ -11090,3 +11094,17 @@ MonoBehaviour:
   pelota: {fileID: 1393212108}
   bola: {fileID: 1393212109}
   velocidad: 1
+  impulseRegre: 1.2
+--- !u!65 &6426506655012665102
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6426506655012665099}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.42, y: 1.87, z: 0.46}
+  m_Center: {x: 0, y: 0.91, z: 0}

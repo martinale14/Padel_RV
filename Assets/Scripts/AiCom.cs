@@ -8,6 +8,7 @@ public class AiCom : MonoBehaviour
     public TurnOnGRavity bola;
     public float velocidad;
     public float impulseRegre;
+    public float factElev;
 
     // Start is called before the first frame update
     void Start()
@@ -26,7 +27,7 @@ public class AiCom : MonoBehaviour
             offset.y = 0;
             offset.x = 0;
             transform.position = new Vector3(transform.position.x,transform.position.y,bola.transform.position.z);
-            GetComponent<Animator>().SetFloat("VelocidadZ", offset.z);
+            GetComponent<Animator>().SetFloat("VelocidadX", offset.z);
 
         }
     }
@@ -37,7 +38,14 @@ public class AiCom : MonoBehaviour
 
             bola.rb.velocity = Vector3.zero;
             bola.rb.angularVelocity = Vector3.zero;
-            bola.rb.AddForce((Vector3.up + Vector3.left)*impulseRegre, ForceMode.Impulse);
+            Vector3 dir = GameObject.Find("palaOp").transform.position-bola.transform.position;
+            dir.x += 2;
+            dir.Normalize();
+            dir.y = 1;
+            print("PalaOp" + GameObject.Find("palaOp").transform.position);
+            print("bola" + bola.transform.position);
+            print("dir" + dir);
+            bola.rb.AddForce(new Vector3(dir.x*impulseRegre, dir.y * factElev, dir.z * impulseRegre), ForceMode.Impulse);
             Physics.IgnoreCollision(GameObject.Find("palaOp").GetComponent<Collider>(), collision.gameObject.GetComponent<Collider>(), false);
             bola.turnoCom = false;
         }

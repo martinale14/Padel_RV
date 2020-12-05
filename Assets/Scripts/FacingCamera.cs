@@ -10,7 +10,7 @@ public class FacingCamera : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        raqueta = GameObject.Find("pala");
+        raqueta = GameObject.Find("palaOp");
         initialPos = transform.parent.position;
     }
 
