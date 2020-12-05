@@ -1025,7 +1025,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: GANASTE
+  m_text: PERDISTE
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8ea23b0dbd62d7e43bbba6c140913f21, type: 2}
   m_sharedMaterial: {fileID: 3858028997687093556, guid: 8ea23b0dbd62d7e43bbba6c140913f21,
