@@ -8,7 +8,7 @@ public class puntos : MonoBehaviour
     public Text myScore;
     public Text rivScore;
     public Text mySets;
-    public Text rivSet;
+    public Text rivSets;
 
 
     // Start is called before the first frame update
@@ -21,5 +21,8 @@ public class puntos : MonoBehaviour
     void Update()
     {
         myScore.text = PlayerPrefs.GetInt("myScore").ToString();
+        rivScore.text = PlayerPrefs.GetInt("rivScore").ToString();
+        mySets.text = PlayerPrefs.GetInt("mySets").ToString();
+        rivSets.text = PlayerPrefs.GetInt("rivSets").ToString();
     }
 }

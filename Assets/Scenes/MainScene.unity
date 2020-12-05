@@ -353,9 +353,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myScore: {fileID: 2122285265}
-  rivScore: {fileID: 0}
-  mySets: {fileID: 0}
-  rivSet: {fileID: 0}
+  rivScore: {fileID: 106286829}
+  mySets: {fileID: 510007503}
+  rivSets: {fileID: 918827482}
 --- !u!1 &21674522
 GameObject:
   m_ObjectHideFlags: 0
@@ -3417,7 +3417,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 584962867}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -3712,7 +3712,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turno: {fileID: 1393212109}
-  rebote: 0
 --- !u!65 &706043389
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3824,6 +3823,7 @@ GameObject:
   m_Component:
   - component: {fileID: 841437768}
   - component: {fileID: 841437767}
+  - component: {fileID: 841437769}
   m_Layer: 0
   m_Name: Pared (5)
   m_TagString: Pared
@@ -3858,6 +3858,19 @@ Transform:
   m_Father: {fileID: 428810675}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &841437769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 841437766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e09a5b4b4166994dad58adb6f87a119, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turno: {fileID: 0}
 --- !u!1001 &848324297
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4509,7 +4522,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 9100000, guid: a7d96cea1b420e24db5aa862e65d3dab, type: 2}
     - target: {fileID: 6769863803743758771, guid: 0e7c48c8b3f3f784784585fe67528cf0,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -8486,6 +8499,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1377656336}
   - component: {fileID: 1377656335}
+  - component: {fileID: 1377656337}
   m_Layer: 0
   m_Name: Pared (4)
   m_TagString: Pared
@@ -8520,6 +8534,19 @@ Transform:
   m_Father: {fileID: 428810675}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &1377656337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1377656334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e09a5b4b4166994dad58adb6f87a119, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turno: {fileID: 0}
 --- !u!1 &1393212108 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4958695222898628007, guid: 977548b201ba4a443bd6772fbf7dea06,
@@ -9926,6 +9953,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1788815055}
   - component: {fileID: 1788815054}
+  - component: {fileID: 1788815056}
   m_Layer: 0
   m_Name: Pared (1)
   m_TagString: Pared
@@ -9960,6 +9988,19 @@ Transform:
   m_Father: {fileID: 428810675}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1788815056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1788815053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e09a5b4b4166994dad58adb6f87a119, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turno: {fileID: 0}
 --- !u!1 &1799696323
 GameObject:
   m_ObjectHideFlags: 0
@@ -11193,7 +11234,7 @@ MonoBehaviour:
   pelota: {fileID: 1393212108}
   bola: {fileID: 1393212109}
   velocidad: 1
-  impulseRegre: 0
+  impulseRegre: 1.2
 --- !u!65 &6426506655012665101
 BoxCollider:
   m_ObjectHideFlags: 0

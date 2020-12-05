@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class zona1Trig : MonoBehaviour
 {
     public TurnOnGRavity turno;
-    public int rebote;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,7 +33,6 @@ public class zona1Trig : MonoBehaviour
                 }else{
 
                 }
-                
             }else{
                 if(rebote > 1){
                     if(PlayerPrefs.GetInt("myScore") < 30){
