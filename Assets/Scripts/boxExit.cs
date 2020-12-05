@@ -47,8 +47,8 @@ public class boxExit : MonoBehaviour
     }
 
     public void resetear2(){
-        int score = PlayerPrefs.GetInt("rivScore");
-        PlayerPrefs.SetInt("rivScore", score + 10);
+        int score = PlayerPrefs.GetInt("myScore");
+        PlayerPrefs.SetInt("myScore", score + 10);
         PlayerPrefs.SetInt("rebote1", 0);
         PlayerPrefs.SetInt("rebote2", 0);
         PlayerPrefs.SetInt("pego1", 0);

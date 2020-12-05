@@ -15,11 +15,13 @@ public class AiCom : MonoBehaviour
 
     public float disToReb;
     private Vector3 posIn;
+    private Animator anim;
 
     // Start is called before the first frame update
     void Start()
     {
         posIn = transform.position;
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -31,11 +33,12 @@ public class AiCom : MonoBehaviour
             Vector3 offset = pelota.transform.position - transform.position;
             print(offset.magnitude);
             if(offset.magnitude < 3){
-                //transform.Translate(new Vector3(0,0,offset.z)*velocidad);
+                transform.Translate(new Vector3(0,0,-offset.x)*velocidad);
+                anim.SetFloat("VelocidadY", -offset.x);
             }else{
-                //if(transform.position.x < posIn.x){
-                  //  transform.Translate(new Vector3(-1,0,0)*Time.deltaTime);
-                //}
+                if(transform.position.x < posIn.x){
+                    transform.Translate(new Vector3(0,0,transform.position.x-posIn.x)*velocidad);
+                }
             }
             if(offset.y > 1){
                 
@@ -44,10 +47,11 @@ public class AiCom : MonoBehaviour
             offset.y = 0;
             offset.x = 0;
             if(transform.position.z < -2.5 && transform.position.z > -12.5){
-                transform.position = new Vector3(transform.position.x,transform.position.y,bola.transform.position.z);
-                //if(offset.magnitude != 0){
-                  //  transform.Translate(new Vector3(0,0,offset.x)*velocidad);
-                //}
+                //transform.position = new Vector3(transform.position.x,transform.position.y,bola.transform.position.z);
+                if(offset.magnitude != 0){
+                  transform.Translate(new Vector3(offset.z,0,0)*velocidad);
+                  anim.SetFloat("VelocidadX", offset.z);
+                }
             }
             //GetComponent<Animator>().SetFloat("VelocidadX", offset.z);
 
@@ -70,6 +74,8 @@ public class AiCom : MonoBehaviour
             bola.rb.AddForce(new Vector3(dir.x*impulseRegre, dir.y * factElev, dir.z * impulseRegre), ForceMode.Impulse);
             Physics.IgnoreCollision(GameObject.Find("palaOp").GetComponent<Collider>(), collision.gameObject.GetComponent<Collider>(), false);
             bola.turnoCom = false;
+            anim.SetFloat("VelocidadX", 0);
+            anim.SetFloat("VelocidadY", 0);
         }
     }
 
